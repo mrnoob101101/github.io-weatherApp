@@ -1,15 +1,7 @@
-const initialState = {
-    isLoading: false,
-}
+import {combineReducers} from "@reduxjs/toolkit";
+import autocompleteSlice from "./autocomplete.slice/autocomplete.slice";
 
-export default function TestReducer(state = initialState, action) {
-    switch (action.type) {
-        case "TEST":
-            return (
-                {isLoading: true}
-            )
-        default:
-            return state;
 
-    }
-}
+export const rootReducer = combineReducers({
+    autoComplete: autocompleteSlice,
+})

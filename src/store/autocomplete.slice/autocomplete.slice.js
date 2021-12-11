@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 
-const weatherSlice = createSlice({
+const autocompleteSlice = createSlice({
         name: "autoComplete",
         initialState: {
             cities: [],
@@ -9,7 +9,7 @@ const weatherSlice = createSlice({
         },
         reducers: {
             getSupposedCitiesFetch(state) {
-                state.status = "loading"
+                state.status = "loading";
             },
             getSupposedCitiesSuccess(state, action) {
                 state.status = "success";
@@ -23,3 +23,6 @@ const weatherSlice = createSlice({
         }
     }
 )
+
+export const {getSupposedCitiesFetch, getSupposedCitiesSuccess, getSupposedCitiesError} = autocompleteSlice.actions;
+export default autocompleteSlice.reducer;
