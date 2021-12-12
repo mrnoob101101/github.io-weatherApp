@@ -8,6 +8,7 @@ export const Search = ({inputValue, handleChangeInputValue}) => {
             type="text"
             value={inputValue}
             onChange={handleChangeInputValue}
+            placeholder="tape here"
         />
 
 
