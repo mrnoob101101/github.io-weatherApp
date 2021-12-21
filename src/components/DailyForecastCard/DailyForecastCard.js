@@ -1,6 +1,8 @@
 import {useSelector} from "react-redux";
 import {nanoid} from "@reduxjs/toolkit";
-import {DailyForecastWrapper} from "./DailyForecast.styles";
+import {DailyForecastWrapper, MinMax} from "./DailyForecast.styles";
+import dayjs from "dayjs";
+
 
 export const DailyForecastCard = () => {
 
@@ -14,25 +16,47 @@ export const DailyForecastCard = () => {
         return days[new Date(dateTimestamp * 1000).getDay()];
     }
 
+    function getMonth(dateTimestamp) {
+        const date = new Date(dateTimestamp * 1000);
+        const month = date.toLocaleString('default', {month: 'short'});
+        console.log(month);
+        return month;
+    }
+    /*const data2 = new Date(1640080800 * 1000);
+    console.log(data2);*/
+
+
+    const date = dayjs(1640080800).format("DD");
+    console.log(date);
+    /*const currentWeather = useSelector((state) => state.forecast.locationForecast.current);*/
     const dailyForecast = useSelector((state) => state.forecast.locationForecast.daily);
     if (weatherData.status === 'success') {
 
         return (
             <DailyForecastWrapper>
                 {dailyForecast.slice(0, 6).map((item) => {
-                    return (<div key={nanoid()}>{getWeekDay(item.dt)}
-
+                    return (<div key={nanoid()}>
+                        {getWeekDay(item.dt)}, {dayjs(item.dt).format("DD")} {getMonth(item.dt)}
+                    <MinMax>
                         <div>
-                            <p>Днём:</p>
-                            <p> {item.temp.day}°С </p>
+                            <p>мин.</p>
+                            <p> {item.temp.min}°С </p>
                         </div>
+                        <div>
+                            <p>макс.</p>
+                            <p> {item.temp.max}°С </p>
+                        </div>
+                    </MinMax>
+                        <img
+                            src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                            alt="weatherImageDaily"
+                        />
                     </div>)
                 })}
             </DailyForecastWrapper>
 
         )
 
-    } else {
-        return null
-    }
+    } else return null
+
 }
