@@ -23,14 +23,13 @@ export const WeatherCard = () => {
                 <span>{descriptionOfWeatherFormatted} </span>
                 <div>
                     <img
-                        src={`http://openweathermap.org/img/wn/${weatherData.locationForecast.current.weather[0].icon}@4x.png`}
+                        src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
                         alt="weatherImage"
                     />
                 </div>
                 <span>Температура:{weatherData.locationForecast.current.temp}°С</span>
 
             </StyledCurrentWeatherWrapper>)
-    } else {
-        return null
-    }
+    } else return null
+
 }
