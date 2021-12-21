@@ -1,6 +1,7 @@
 import {StyledCommonWeatherBox} from "./CommonWeatherBox.styles";
 import {PlacesAutocompleteSearch} from "../Search/PlacesAutocompleteSearch";
 import {WeatherCard} from "../WeatherCard/WeatherCard";
+import {DailyForecastCard} from "../DailyForecastCard/DailyForecastCard";
 
 export const CommonWeatherBox = () => {
 
@@ -9,6 +10,7 @@ export const CommonWeatherBox = () => {
         <StyledCommonWeatherBox>
             <PlacesAutocompleteSearch/>
             <WeatherCard/>
+            <DailyForecastCard/>
         </StyledCommonWeatherBox>
 
     )
