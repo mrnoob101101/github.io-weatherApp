@@ -1,5 +1,5 @@
 import {combineReducers} from "@reduxjs/toolkit";
-import weatherForecastSlice from "./weatherForecast.slice/weatherForecast.slice";
+import weatherForecastSlice from "./autocomplete.slice/weatherForecast.slice";
 
 
 export const rootReducer = combineReducers({
