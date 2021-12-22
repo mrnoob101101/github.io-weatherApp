@@ -1,9 +1,10 @@
 import {useSelector} from "react-redux";
 import React from "react";
-import {StyledCurrentWeatherWrapper} from "./WeatherCard.styles";
+import {StyledCurrentWeatherWrapper} from "./CurrentWeatherCard.styles";
 
 
-export const WeatherCard = () => {
+
+export const CurrentWeatherCard = () => {
     const weatherData = useSelector((state) => state.forecast);
     console.log(weatherData.status);
 
@@ -27,7 +28,10 @@ export const WeatherCard = () => {
                         alt="weatherImage"
                     />
                 </div>
-                <span>Температура:{weatherData.locationForecast.current.temp}°С</span>
+                <span>{currentWeather.temp}°С</span>
+                <span>Скорость ветра: {currentWeather.wind_speed} м/с</span>
+                <span>Ощущается как: {currentWeather.feels_like}°С</span>
+
 
             </StyledCurrentWeatherWrapper>)
     } else return null

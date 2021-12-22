@@ -7,6 +7,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
 import {useDispatch} from "react-redux";
 import {getLatLngFromLibrary, setDescriptionOfPlace} from "../../store/weatherForecast.slice/weatherForecast.slice";
 
+
 export const PlacesAutocompleteSearch = () => {
     const dispatch = useDispatch();
     const {
@@ -30,6 +31,7 @@ export const PlacesAutocompleteSearch = () => {
     };
 
 
+
     const handleSelect =
         ({description}) =>
             () => {
@@ -42,15 +44,17 @@ export const PlacesAutocompleteSearch = () => {
                     .then((results) => getLatLng(results[0]))
                     .then(({lat, lng}) => {
                         console.log("📍 Coordinates: ", {lat, lng});
-                        console.log(lat);
                         dispatch(getLatLngFromLibrary({lat, lng}));
                     })
                     .catch((error) => {
                         console.log("😱 Error: ", error);
                     });
+
                 dispatch(setDescriptionOfPlace(description))
                 setValue("");
             };
+
+
 
     const renderSuggestions = () =>
         data.map((suggestion) => {
