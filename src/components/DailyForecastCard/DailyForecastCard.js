@@ -1,7 +1,10 @@
 import {useSelector} from "react-redux";
 import {nanoid} from "@reduxjs/toolkit";
-import {DailyForecastWrapper, MinMax} from "./DailyForecast.styles";
+import {DailyForecastWrapper, ForecastIcon, MinMax} from "./DailyForecast.styles";
 import dayjs from "dayjs";
+import React from "react";
+import {Rain, SunnyDay, svgIcons} from "../../assets/SvgIcons";
+import {getSvgIcon} from "../../utils/svgIconLoader";
 
 
 export const DailyForecastCard = () => {
@@ -38,6 +41,7 @@ export const DailyForecastCard = () => {
                 {dailyForecast.slice(0, 6).map((item) => {
                     return (<div key={nanoid()}>
                         {getWeekDay(item.dt)}, {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}
+
                         <MinMax>
                             <div>
                                 <p>мин.</p>
@@ -48,6 +52,9 @@ export const DailyForecastCard = () => {
                                 <p> {item.temp.max}°С </p>
                             </div>
                         </MinMax>
+                        <ForecastIcon>
+                           {getSvgIcon(item.weather[0].icon)}
+                        </ForecastIcon>
 
                     </div>)
                 })}
