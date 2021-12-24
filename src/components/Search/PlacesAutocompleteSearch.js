@@ -1,11 +1,17 @@
-import {StyledSearch} from "./PlacesAutocompleteSearch.styles";
+import {
+    SearchBox,
+    SearchWrapper,
+    StyledSearch,
+    SuggestionPlace,
+    SuggestionsStyled
+} from "./PlacesAutocompleteSearch.styles";
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
 } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
 import {useDispatch} from "react-redux";
-import {getLatLngFromLibrary, setDescriptionOfPlace} from "../../store/weatherForecast.slice/weatherForecast.slice";
+import {getLatLngFromLibrary, setDescriptionOfPlace, setWeatherCardClear} from "../../store/weatherForecast.slice/weatherForecast.slice";
 
 
 export const PlacesAutocompleteSearch = () => {
@@ -35,7 +41,7 @@ export const PlacesAutocompleteSearch = () => {
     const handleSelect =
         ({description}) =>
             () => {
-
+                dispatch(setWeatherCardClear())
                 setValue(description, false);
                 clearSuggestions();
 
@@ -64,23 +70,25 @@ export const PlacesAutocompleteSearch = () => {
             } = suggestion;
 
             return (
-                <li key={place_id} onClick={handleSelect(suggestion)}>
+                <SuggestionPlace key={place_id} onClick={handleSelect(suggestion)}>
                     <strong>{main_text}</strong> <small>{secondary_text}</small>
-                </li>
+                </SuggestionPlace>
             );
         });
 
     return (
-        <div ref={ref}>
+        <SearchBox>
+        <SearchWrapper ref={ref}>
             <StyledSearch
                 value={value}
                 onChange={handleInput}
                 disabled={!ready}
-                placeholder="Введите место"
+                placeholder="Введите местоположение"
             />
 
-            {status === "OK" && <ul>{renderSuggestions()}</ul>}
+            {status === "OK" && <SuggestionsStyled>{renderSuggestions()}</SuggestionsStyled>}
             {status === "ZERO_RESULTS" && <span>Введите корректное место</span>}
-        </div>
+        </SearchWrapper>
+        </SearchBox>
     );
 };

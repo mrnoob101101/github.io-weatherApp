@@ -10,6 +10,9 @@ const weatherForecastSlice = createSlice({
             descriptionOfPlace: "",
         },
         reducers: {
+            setWeatherCardClear(state) {
+                state.status = "idle";
+            },
             getLatLngFromLibrary(state, action) {
                 state.LatLng = action.payload;
                 state.status = "loading";
@@ -31,6 +34,7 @@ const weatherForecastSlice = createSlice({
 )
 
 export const {
+    setWeatherCardClear,
     getLatLngFromLibrary,
     getForecastSuccess,
     getForecastError,

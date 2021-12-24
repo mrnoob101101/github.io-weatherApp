@@ -1,6 +1,11 @@
 import {useSelector} from "react-redux";
 import React from "react";
-import {StyledCurrentWeatherWrapper, WeatherIcon} from "./CurrentWeatherCard.styles";
+import {
+    AdditionalInfoBlock,
+    MainWeatherBlock,
+    StyledCurrentWeatherWrapper,
+    WeatherIcon
+} from "./CurrentWeatherCard.styles";
 import {
     ClearNight,
     Clouds,
@@ -31,11 +36,13 @@ export const CurrentWeatherCard = () => {
 
         return (
             <StyledCurrentWeatherWrapper>
+                <MainWeatherBlock>
                 <span>{place}</span>
                 <span>{descriptionOfWeatherFormatted} </span>
                 {/*<div>
                     <img
-                        src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
+                        src={Snow}
+                            `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`
                         alt="weatherImage"
                     />
                 </div>*/}
@@ -43,9 +50,11 @@ export const CurrentWeatherCard = () => {
                     {getSvgIcon(currentWeather.weather[0].icon)}
                 </WeatherIcon>
                 <span>{currentWeather.temp}°С</span>
+                </MainWeatherBlock>
+                <AdditionalInfoBlock>
                 <span>Скорость ветра: {currentWeather.wind_speed} м/с</span>
                 <span>Ощущается как: {currentWeather.feels_like}°С</span>
-
+                </AdditionalInfoBlock>
                {/* <SunnyDay/>
                 <ClearNight/>
                 <PartlyClouds/>
