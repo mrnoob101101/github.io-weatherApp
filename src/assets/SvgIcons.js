@@ -1,7 +1,7 @@
 export const SunnyDay = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             fill="#FFB300"
@@ -59,7 +59,7 @@ export const PartlyClouds = () => {
 export const PartlyCloudsNight = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 514.451 512"
@@ -106,7 +106,7 @@ export const HardClouds /*04n*/ = () => {
 export const Rain = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 512 512"
@@ -123,7 +123,7 @@ export const Rain = () => {
 export const RainWithSun /*10d*/ = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 512 512"
@@ -142,7 +142,7 @@ export const RainWithSun /*10d*/ = () => {
 export const RainWithMoon /*10n*/ = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 512 512"
@@ -161,7 +161,7 @@ export const RainWithMoon /*10n*/ = () => {
 export const Thunder /*11d*/ = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 512 512"
@@ -178,7 +178,7 @@ export const Thunder /*11d*/ = () => {
 export const Snow /*13d*/ = () => {
     return (<svg
             xmlns="http://www.w3.org/2000/svg"
-            style={{isolation: "isolate"}}
+            style={{isolation: "auto"}}
             width="512"
             height="512"
             viewBox="0 0 512 512"

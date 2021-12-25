@@ -3,21 +3,15 @@ import React from "react";
 import {
     AdditionalInfoBlock,
     MainWeatherBlock,
-    StyledCurrentWeatherWrapper,
+    StyledCurrentWeatherWrapper, StyledP, Text, TextBig, WeatherDiv,
     WeatherIcon
 } from "./CurrentWeatherCard.styles";
-import {
-    ClearNight,
-    Clouds,
-    HardClouds, Mist,
-    PartlyClouds,
-    PartlyCloudsNight,
-    Rain, RainWithMoon,
-    RainWithSun, Snow,
-    SunnyDay, Thunder
-} from "../../assets/SvgIcons";
-import {getSvgIcon, icons} from "../../utils/svgIconLoader";
 
+import {getSvgIcon} from "../../utils/svgIconLoader";
+import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
+import dayjs from "dayjs";
+import {getWeekDay} from "../../utils/getWeekDay";
+import {getMonth} from "../../utils/getMonth";
 
 
 export const CurrentWeatherCard = () => {
@@ -27,47 +21,30 @@ export const CurrentWeatherCard = () => {
     const currentWeather = useSelector((state) => state.forecast.locationForecast.current);
     const place = useSelector((state) => state.forecast.descriptionOfPlace);
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
 
     if (weatherData.status === 'success') {
-        const descriptionOfWeatherFormatted = capitalizeFirstLetter(currentWeather.weather[0].description);
+
 
         return (
             <StyledCurrentWeatherWrapper>
                 <MainWeatherBlock>
-                <span>{place}</span>
-                <span>{descriptionOfWeatherFormatted} </span>
-                {/*<div>
-                    <img
-                        src={Snow}
-                            `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`
-                        alt="weatherImage"
-                    />
-                </div>*/}
-                <WeatherIcon>
-                    {getSvgIcon(currentWeather.weather[0].icon)}
-                </WeatherIcon>
-                <span>{currentWeather.temp}°С</span>
+                    <b><TextBig>{place.split(',')[0]}</TextBig></b>
+                    <b><Text>{getWeekDay(currentWeather.dt)}, {dayjs(currentWeather.dt * 1000).format("DD")}
+                        {getMonth(currentWeather.dt)}</Text></b>
+                    <WeatherDiv>
+                        <WeatherIcon>
+                            {getSvgIcon(currentWeather.weather[0].icon)}
+                        </WeatherIcon>
+                        <StyledP>{Math.round(currentWeather.temp)}°С</StyledP>
+
+                    </WeatherDiv>
+                    <b><Text>{capitalizeFirstLetter(currentWeather.weather[0].description)} </Text></b>
                 </MainWeatherBlock>
                 <AdditionalInfoBlock>
-                <span>Скорость ветра: {currentWeather.wind_speed} м/с</span>
-                <span>Ощущается как: {currentWeather.feels_like}°С</span>
+                    <b><Text>Скорость ветра: {currentWeather.wind_speed} м/с</Text></b>
+                    <b><Text>Ощущается как: {Math.round(currentWeather.feels_like)}°С</Text></b>
+                    <b> <Text>Влажность: {currentWeather.humidity}%</Text></b>
                 </AdditionalInfoBlock>
-               {/* <SunnyDay/>
-                <ClearNight/>
-                <PartlyClouds/>
-                <PartlyCloudsNight/>
-                <Clouds/>
-                <HardClouds/>
-                <Rain/>
-                <RainWithSun/>
-                <RainWithMoon/>
-                <Thunder/>
-                <Snow/>
-                <Mist/>*/}
-
 
 
             </StyledCurrentWeatherWrapper>)

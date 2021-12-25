@@ -1,6 +1,6 @@
 import {
     SearchBox,
-    SearchWrapper,
+    SearchWrapper, Span,
     StyledSearch,
     SuggestionPlace,
     SuggestionsStyled
@@ -87,7 +87,7 @@ export const PlacesAutocompleteSearch = () => {
             />
 
             {status === "OK" && <SuggestionsStyled>{renderSuggestions()}</SuggestionsStyled>}
-            {status === "ZERO_RESULTS" && <span>Введите корректное место</span>}
+            {status === "ZERO_RESULTS" && <Span>Введите корректное место</Span>}
         </SearchWrapper>
         </SearchBox>
     );

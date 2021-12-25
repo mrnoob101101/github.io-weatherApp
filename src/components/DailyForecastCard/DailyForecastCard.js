@@ -5,6 +5,8 @@ import dayjs from "dayjs";
 import React from "react";
 import {Rain, SunnyDay, svgIcons} from "../../assets/SvgIcons";
 import {getSvgIcon} from "../../utils/svgIconLoader";
+import {getWeekDay} from "../../utils/getWeekDay";
+import {getMonth} from "../../utils/getMonth";
 
 
 export const DailyForecastCard = () => {
@@ -13,18 +15,9 @@ export const DailyForecastCard = () => {
 
     const weatherData = useSelector((state) => state.forecast);
 
-    function getWeekDay(dateTimestamp) {
-        let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-        console.log(new Date(dateTimestamp * 1000))
-        return days[new Date(dateTimestamp * 1000).getDay()];
-    }
 
-    function getMonth(dateTimestamp) {
-        const date = new Date(dateTimestamp * 1000);
-        const month = date.toLocaleString('default', {month: 'short'});
-        console.log(month);
-        return month;
-    }
+
+
 
     /*const data2 = new Date(1640080800 * 1000);
     console.log(data2);*/
