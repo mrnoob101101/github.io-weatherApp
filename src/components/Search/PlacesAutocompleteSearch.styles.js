@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   
   
 `
@@ -18,9 +18,9 @@ export const SearchWrapper = styled.div`
 export const StyledSearch = styled.input`
   width: 600px;
   font-size: 2em;
-  color: black;
+  color: white;
   outline: none;
-  margin-top: 3em;
+  margin-top: 2em;
   border: 0;
   max-width: 100%;
   
@@ -38,16 +38,17 @@ export const StyledSearch = styled.input`
 
 export const SuggestionsStyled = styled.div`
   position: absolute;
-  padding-top: 8em;
+  padding-top: 5.5em;
   font-size: 20px;
    
 `
 export const SuggestionPlace = styled.div`
-  background-color:#F0F0F0;
+  background-color:#add9d4 /*#F0F0F0*/;
   line-height: 2;
-  border-bottom: 2px solid #94c0c2;
+  border-bottom: 2px solid white/*#94c0c2*/;
   width:635px;
   font-family: 'Tinos', serif;
+  color: darkslategray;
   padding-left: 1vw;
   :hover {
     background-color: beige;
@@ -56,5 +57,5 @@ export const SuggestionPlace = styled.div`
 `
 export const Span = styled.span`
   position: absolute;
-  padding-top: 8.5em;
+  padding-top: 7em;
 `

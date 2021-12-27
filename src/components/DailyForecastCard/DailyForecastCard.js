@@ -1,9 +1,8 @@
 import {useSelector} from "react-redux";
 import {nanoid} from "@reduxjs/toolkit";
-import {DailyForecastWrapper, ForecastIcon, MinMax} from "./DailyForecast.styles";
+import {Card, DailyForecastWrapper, DateDiv, ForecastIcon, Max} from "./DailyForecast.styles";
 import dayjs from "dayjs";
 import React from "react";
-import {Rain, SunnyDay, svgIcons} from "../../assets/SvgIcons";
 import {getSvgIcon} from "../../utils/svgIconLoader";
 import {getWeekDay} from "../../utils/getWeekDay";
 import {getMonth} from "../../utils/getMonth";
@@ -14,9 +13,6 @@ export const DailyForecastCard = () => {
     /*const handleSelector = (state) => state.forecast.locationForecast.daily;*/
 
     const weatherData = useSelector((state) => state.forecast);
-
-
-
 
 
     /*const data2 = new Date(1640080800 * 1000);
@@ -30,28 +26,24 @@ export const DailyForecastCard = () => {
     if (weatherData.status === 'success') {
 
         return (
-            <DailyForecastWrapper>
+            <b><DailyForecastWrapper>
                 {dailyForecast.slice(0, 6).map((item) => {
-                    return (<div key={nanoid()}>
-                        {getWeekDay(item.dt)}, {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}
-
-                        <MinMax>
-                            <div>
-                                <p>мин.</p>
-                                <p> {item.temp.min}°С </p>
-                            </div>
-                            <div>
-                                <p>макс.</p>
-                                <p> {item.temp.max}°С </p>
-                            </div>
-                        </MinMax>
+                    return (<Card key={nanoid()}>
+                        <DateDiv>
+                            {getWeekDay(item.dt)}<br/>
+                            {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}
+                        </DateDiv>
+                        <div>
+                            <Max> {Math.round(item.temp.max)}°С </Max>
+                            <p> {Math.round(item.temp.min)}°С </p>
+                        </div>
                         <ForecastIcon>
-                           {getSvgIcon(item.weather[0].icon)}
+                            {getSvgIcon(item.weather[0].icon)}
                         </ForecastIcon>
 
-                    </div>)
+                    </Card>)
                 })}
-            </DailyForecastWrapper>
+            </DailyForecastWrapper></b>
 
         )
 

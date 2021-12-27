@@ -14,12 +14,13 @@ export const WeatherIcon = styled.div`
    /* width: 100%;
     height: 100%;*/
     fill: white;       
+    
   }
   
 `
 
 export const MainWeatherBlock = styled.div`
-  margin-left: 8vw;
+  margin-left: 10vw;
 `
 export const AdditionalInfoBlock = styled.div`
   font-size: 2vw ;
@@ -42,10 +43,13 @@ export const Text = styled.p`
   font-size:calc(11px + 1.2vw);
   color: white;
   line-height: 0.7;
+  margin-top: 2px;
 `
 
 export const TextBig = styled.p`
   font-size:calc(20px + 1.5vw);
   color: white;
   line-height: 0.7;
+  margin-top: 2vw;
+  
 `
