@@ -11,7 +11,11 @@ import usePlacesAutocomplete, {
 } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
 import {useDispatch} from "react-redux";
-import {getLatLngFromLibrary, setDescriptionOfPlace, setWeatherCardClear} from "../../store/weatherForecast.slice/weatherForecast.slice";
+import {
+    getLatLngFromLibrary,
+    setDescriptionOfPlace,
+    setWeatherCardClear
+} from "../../store/weatherForecast.slice/weatherForecast.slice";
 
 
 export const PlacesAutocompleteSearch = () => {
@@ -37,7 +41,6 @@ export const PlacesAutocompleteSearch = () => {
     };
 
 
-
     const handleSelect =
         ({description}) =>
             () => {
@@ -61,7 +64,6 @@ export const PlacesAutocompleteSearch = () => {
             };
 
 
-
     const renderSuggestions = () =>
         data.map((suggestion) => {
             const {
@@ -78,17 +80,19 @@ export const PlacesAutocompleteSearch = () => {
 
     return (
         <SearchBox>
-        <SearchWrapper ref={ref}>
-            <StyledSearch
-                value={value}
-                onChange={handleInput}
-                disabled={!ready}
-                placeholder="Введите местоположение"
-            />
+            <SearchWrapper ref={ref}>
+                <StyledSearch
+                    value={value}
+                    onChange={handleInput}
+                    disabled={!ready}
+                    placeholder="Введите местоположение"
+                />
 
-            {status === "OK" && <SuggestionsStyled>{renderSuggestions()}</SuggestionsStyled>}
-            {status === "ZERO_RESULTS" && <Span>Введите корректное место</Span>}
-        </SearchWrapper>
+                {status === "OK" && <SuggestionsStyled>{renderSuggestions()}</SuggestionsStyled>}
+                {status === "ZERO_RESULTS" && <Span>Введите корректное место</Span>}
+
+            </SearchWrapper>
+
         </SearchBox>
     );
 };

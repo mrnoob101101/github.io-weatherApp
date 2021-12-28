@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const DailyForecastWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /*font-size: 1vw;*/
   font-size:calc(10px + 0.5vw);
-  padding: 3vw 7vw 0 7vw;
-  border-top: 3px solid white;
+  padding: 2vw 7vw 0 7vw;
+  border-top: 3px solid white;  
   font-family: 'Poiret One', cursive;
   color: white;
+  
   
 `
 export const Card = styled.div`

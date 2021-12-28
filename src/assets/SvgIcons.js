@@ -213,3 +213,110 @@ export const Mist /*50d*/ = () => {
             <path d="M34.517 296.27H385.438V330.787H34.517z"></path>
         </svg>)
 }
+
+export const SunnyIcon /*50d*/ = () => {
+    return (<svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0"
+        y="0"
+        width="700"
+        height="700"
+        className="climacon climacon_sun"
+        version="1.1"
+        viewBox="15 15 70 70"
+        xmlSpace="preserve"
+    >
+        <clipPath id="sunFillClip">
+            <path d="M0 0v100h100V0H0zm50.001 57.999A8 8 0 1150 42.002a8 8 0 01.001 15.997z"></path>
+        </clipPath>
+        <g className="climacon_iconWrap climacon_iconWrap-sun">
+            <g className="climacon_componentWrap climacon_componentWrap-sun">
+                <g className="climacon_componentWrap climacon_componentWrap-sunSpoke">
+                    <path
+                        d="M72.03 51.999h-3.998a2 2 0 110-3.999h3.998a2 2 0 010 3.999z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-east"
+                    ></path>
+                    <path
+                        d="M64.175 38.688a2 2 0 11-2.828-2.828l2.828-2.828a2 2 0 112.828 2.828l-2.828 2.828z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northEast"
+                    ></path>
+                    <path
+                        d="M50.034 34.002a2 2 0 01-2-2v-3.999a2 2 0 014 0v3.999c0 1.104-.898 2-2 2z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north"
+                    ></path>
+                    <path
+                        d="M35.893 38.688l-2.827-2.828a2 2 0 012.827-2.828l2.827 2.828a2 2 0 01-2.827 2.828z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northWest"
+                    ></path>
+                    <path
+                        d="M34.034 50a2 2 0 01-2 1.999h-4a1.999 1.999 0 010-3.999h4a2 2 0 012 2z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-west"
+                    ></path>
+                    <path
+                        d="M35.893 61.312a2 2 0 012.827 2.828l-2.827 2.827a1.998 1.998 0 11-2.827-2.827l2.827-2.828z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southWest"
+                    ></path>
+                    <path
+                        d="M50.034 65.998a2 2 0 012 1.999v4a2 2 0 01-4 0v-4a2 2 0 012-1.999z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-south"
+                    ></path>
+                    <path
+                        d="M64.175 61.312l2.828 2.828a2 2 0 01-2.828 2.827l-2.828-2.827a2 2 0 112.828-2.828z"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southEast"
+                    ></path>
+                </g>
+                <g
+                    className="climacon_componentWrap climacon_componentWrap_sunBody"
+                    clipPath="url(#sunFillClip)"
+                >
+                    <circle
+                        cx="50.034"
+                        cy="50"
+                        r="11.999"
+                        className="climacon_component climacon_component-stroke climacon_component-stroke_sunBody"
+                    ></circle>
+                </g>
+            </g>
+        </g>
+    </svg>)
+}
+
+export const Loader = () => {
+    return(<svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0"
+        y="0"
+        version="1.1"
+        viewBox="0 0 100 100"
+        xmlSpace="preserve"
+    >
+        <circle cx="6" cy="50" r="6" fill="#fff">
+            <animate
+                attributeName="opacity"
+                begin="0.1"
+                dur="1s"
+                repeatCount="indefinite"
+                values="0;1;0"
+            ></animate>
+        </circle>
+        <circle cx="26" cy="50" r="6" fill="#fff">
+            <animate
+                attributeName="opacity"
+                begin="0.2"
+                dur="1s"
+                repeatCount="indefinite"
+                values="0;1;0"
+            ></animate>
+        </circle>
+        <circle cx="46" cy="50" r="6" fill="#fff">
+            <animate
+                attributeName="opacity"
+                begin="0.3"
+                dur="1s"
+                repeatCount="indefinite"
+                values="0;1;0"
+            ></animate>
+        </circle>
+    </svg>
+    )
+}

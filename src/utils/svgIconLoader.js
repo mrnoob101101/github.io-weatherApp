@@ -34,36 +34,4 @@ export const getSvgIcon = (id) => {
     return icons[id];
 }
 
-/*export const svgIconLoader = (id) => {
-    switch (id) {
-        case "01d":
-            return <SunnyDay/>;
-        case "01n":
-            return <ClearNight/>;
-        case "02d":
-            return <PartlyClouds/>;
-        case "02n":
-            return <PartlyCloudsNight/>;
-        case "03d":
-            return <Clouds/>;
-        case
-    }
-}*/
 
-
-
-
-
-
-   /* <SunnyDay/>
-    <ClearNight/>
-    <PartlyClouds/>
-    <PartlyCloudsNight/>
-    <Clouds/>
-    <HardClouds/>
-    <Rain/>
-    <RainWithSun/>
-    <RainWithMoon/>
-    <Thunder/>
-    <Snow/>
-    <Mist/>*/
