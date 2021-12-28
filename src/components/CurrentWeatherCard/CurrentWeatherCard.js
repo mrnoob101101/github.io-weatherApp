@@ -12,17 +12,15 @@ import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
 import dayjs from "dayjs";
 import {getWeekDay} from "../../utils/getWeekDay";
 import {getMonth} from "../../utils/getMonth";
-import {SunnyIcon, Loader} from "../../assets/SvgIcons";
+import {SunnyIcon,} from "../../assets/SvgIcons";
 import {NearestForecast} from "../NearestForecast/NearestForecast";
 import {getTimeOfDayWithTimeZoneOffset} from "../../utils/getTimeOfDayWithTimeZoneOffset";
 
 
 export const CurrentWeatherCard = () => {
     const weatherData = useSelector((state) => state.forecast);
-    console.log(weatherData.status);
     const currentWeather = useSelector((state) => state.forecast.locationForecast.current);
     const place = useSelector((state) => state.forecast.descriptionOfPlace);
-    const hourlyWeather = useSelector((state) => state.forecast.locationForecast.hourly)
 
     if (weatherData.status === 'idle') {
         return (
@@ -68,7 +66,7 @@ export const CurrentWeatherCard = () => {
 
     } else if (weatherData.status === 'error') {
         return (
-            <StyledP>Sorry, error occurred</StyledP>
+            <StyledP>Произошла чудовищная ошибка!</StyledP>
         )
     } else return null
 }

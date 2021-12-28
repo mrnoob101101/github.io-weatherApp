@@ -5,7 +5,7 @@ import React from "react";
 import {selectHours} from "../../store/weatherForecast.slice/selectors";
 import {useSelector} from "react-redux";
 import {getTimeOfDayWithTimeZoneOffset} from "../../utils/getTimeOfDayWithTimeZoneOffset";
-import {DivStyled} from "./NearestForecast.styles";
+import {DivStyled, Temp} from "./NearestForecast.styles";
 
 export const NearestForecast = () => {
 
@@ -14,7 +14,7 @@ export const NearestForecast = () => {
     return hours.map((item) => {
         return (<DivStyled
                 key={nanoid()}>{getTimeOfDayWithTimeZoneOffset(item.dt, weatherData.locationForecast.timezone_offset)}
-                <div>{Math.round(item.temp)}°</div>
+                <Temp>{Math.round(item.temp)}°</Temp>
                 <ForecastIcon>
                     {getSvgIcon(item.weather[0].icon)}
                 </ForecastIcon>

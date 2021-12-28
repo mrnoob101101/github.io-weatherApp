@@ -74,6 +74,7 @@ export const TextBig = styled.p`
   margin-top: 2vw;
 
 `
+
 export const IdleStatusIcon = styled.div`
   display: flex;
   justify-content: center;

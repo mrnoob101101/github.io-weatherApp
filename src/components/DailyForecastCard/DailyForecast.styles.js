@@ -8,9 +8,7 @@ export const DailyForecastWrapper = styled.div`
   padding: 2vw 7vw 0 7vw;
   border-top: 3px solid white;  
   font-family: 'Poiret One', cursive;
-  color: white;
-  
-  
+  color: white;  
 `
 export const Card = styled.div`
   width: 11vw;

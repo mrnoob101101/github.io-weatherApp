@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CommonWeatherBox} from "./components/CommonWeatherBox/CommonWeatherBox";
+import {CommonWeatherBox} from "../components/CommonWeatherBox/CommonWeatherBox";
 
 
 function App() {
