@@ -219,11 +219,12 @@ export const SunnyIcon /*50d*/ = () => {
         xmlns="http://www.w3.org/2000/svg"
         x="0"
         y="0"
-        width="700"
+        width="500"
         height="700"
         className="climacon climacon_sun"
         version="1.1"
         viewBox="15 15 70 70"
+
         xmlSpace="preserve"
     >
         <clipPath id="sunFillClip">

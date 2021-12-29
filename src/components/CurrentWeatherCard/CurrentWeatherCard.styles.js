@@ -9,12 +9,15 @@ export const StyledCurrentWeatherWrapper = styled.div`
 `
 
 export const WeatherIcon = styled.div`
+   
   svg {
-    max-width: 12vw;
-    max-height: 12vw;
-    /* width: 100%;
-     height: 100%;*/
+    width: calc(10px + 14vw);
+    max-width: 19vw;
+    max-height: 14vw;
+    /*width: 100%;
+    height: 100%;*/
     fill: white;
+    font-size:calc(10px + 3vw);
 
   }
 
@@ -32,11 +35,16 @@ export const AdditionalInfoBlock = styled.div`
   font-size: 2vw;
   color: white;
   margin-right: 10vw;
-  padding-top: 0;
-
+  /*padding-top: 0 0 0;*/
+  padding-left: 5vw;
+  
 `
+
 export const WeatherDiv = styled.div`
   display: flex;
+  font-size: calc(20px + 1.5vw);
+  
+  
 
 `
 export const DayForecast = styled.div`
@@ -48,14 +56,15 @@ export const DayForecast = styled.div`
 
 `
 export const TextInfo = styled.div`
-  /*background-color: #056b62;*/
-  border-radius: 30px;
   padding: 1vw 1vw 1vw 2vw;
   margin-bottom: 4vw;
+  font-size: 1vw;
 `
 
 export const StyledP = styled.p`
   font-size: 7vw;
+  
+  
   color: white;
   margin: 5% 0 0 10%;
 
@@ -63,27 +72,35 @@ export const StyledP = styled.p`
 export const Text = styled.p`
   font-size: calc(11px + 1vw);
   color: white;
-  line-height: 0.9;
-  /*margin-top: 2px;*/
+  line-height: 0.9;  
+`
+export const Text2 = styled.p`
+  font-size: calc(9px + 1vw);
+  color: white;
+  line-height: 0.9;  
+`
+export const Text3 = styled.p`
+  font-size: calc(9px + 1vw);
+  color: white;
+  line-height: 0.7;  
+  padding-left: 3vw;
 `
 
 export const TextBig = styled.p`
-  font-size: calc(20px + 1.5vw);
+  font-size: calc(15px + 1.5vw);
   color: white;
   line-height: 0.9;
   margin-top: 2vw;
-
 `
 
 export const IdleStatusIcon = styled.div`
   display: flex;
   justify-content: center;
-
+  overflow: hidden;
   svg {
     shape-rendering: geometricPrecision;
     fill: #fac55d;
-    /*#FFCC33*/
-
+    max-width: 100%;      
   }
 
   g, path, circle, rect {
@@ -93,7 +110,8 @@ export const IdleStatusIcon = styled.div`
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     transform-box: fill-box;
-
+    
+    
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
     animation-timing-function: linear;

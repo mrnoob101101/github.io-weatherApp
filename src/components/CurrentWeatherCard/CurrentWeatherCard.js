@@ -3,7 +3,7 @@ import React from "react";
 import {
     AdditionalInfoBlock, DayForecast, IdleStatusIcon,
     MainWeatherBlock,
-    StyledCurrentWeatherWrapper, StyledP, Text, TextBig, TextInfo, WeatherDiv,
+    StyledCurrentWeatherWrapper, StyledP, Text, Text2, Text3, TextBig, TextInfo, WeatherDiv,
     WeatherIcon
 } from "./CurrentWeatherCard.styles";
 
@@ -48,7 +48,7 @@ export const CurrentWeatherCard = () => {
                         </WeatherIcon>
                         <StyledP>{Math.round(currentWeather.temp)}°С</StyledP>
                     </WeatherDiv>
-                    <b><Text>{capitalizeFirstLetter(currentWeather.weather[0].description)} </Text></b>
+                    <b><Text3>{capitalizeFirstLetter(currentWeather.weather[0].description)} </Text3></b>
                 </MainWeatherBlock>
 
                 <AdditionalInfoBlock>
@@ -56,9 +56,9 @@ export const CurrentWeatherCard = () => {
                         <NearestForecast/>
                     </DayForecast></b>
                     <TextInfo>
-                        <b><Text> Ветер: {currentWeather.wind_speed} м/с</Text></b>
-                        <b><Text>Ощущается как: {Math.round(currentWeather.feels_like)}°С</Text></b>
-                        <b> <Text>Влажность: {currentWeather.humidity}%</Text></b>
+                        <b><Text2>Ветер: {currentWeather.wind_speed} м/с</Text2></b>
+                        <b><Text2>Ощущается как: {Math.round(currentWeather.feels_like)}°С</Text2></b>
+                        <b><Text2>Влажность: {currentWeather.humidity}%</Text2></b>
                     </TextInfo>
                 </AdditionalInfoBlock>
 

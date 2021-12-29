@@ -4,8 +4,6 @@ export const SearchBox = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 0.5em;
-
-
 `
 
 export const SearchWrapper = styled.div`
@@ -16,18 +14,17 @@ export const SearchWrapper = styled.div`
 `
 
 export const StyledSearch = styled.input`
-  width: 600px;
-  font-size: 2em;
+  
+  font-size:calc(10px + 1.2vw);
   color: white;
   outline: none;
   margin-top: 1.2em;
   border: 0;
   max-width: 100%;
-
   border-bottom: 3px solid white /*#296e6b*/;
   font-family: 'Tinos', serif;
   background-color: transparent;
-  padding: 0 20px;
+  padding: 0 40px;
 
   ::placeholder {
     color: white
@@ -42,8 +39,9 @@ export const StyledSearch = styled.input`
 
 export const SuggestionsStyled = styled.div`
   position: absolute;
-  padding-top: 5.5em;
-  font-size: 20px;
+  padding-top: calc(25px + 3vw);
+  /*font-size: 2vw;*/
+  font-size: calc(5px + 1.5vw);
 
 `
 export const SuggestionPlace = styled.div`

@@ -25,7 +25,8 @@ export const ForecastIcon = styled.div`
  `
 
 export const DateDiv = styled.div`
-  font-family: Tinos,serif ;
+  font-family: Tinos,serif;
+  font-size:calc(7px + 0.6vw);
   
 `
 export const Max = styled.p`
