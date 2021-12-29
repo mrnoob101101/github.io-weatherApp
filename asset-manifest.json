@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/mrnoob101101.github.io.weatherApp/static/css/main.0d03685b.chunk.css",
+    "main.js": "/mrnoob101101.github.io.weatherApp/static/js/main.b4f079c1.chunk.js",
+    "main.js.map": "/mrnoob101101.github.io.weatherApp/static/js/main.b4f079c1.chunk.js.map",
+    "runtime-main.js": "/mrnoob101101.github.io.weatherApp/static/js/runtime-main.c9b0eceb.js",
+    "runtime-main.js.map": "/mrnoob101101.github.io.weatherApp/static/js/runtime-main.c9b0eceb.js.map",
+    "static/js/2.8254b984.chunk.js": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js",
+    "static/js/2.8254b984.chunk.js.map": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js.map",
+    "index.html": "/mrnoob101101.github.io.weatherApp/index.html",
+    "static/css/main.0d03685b.chunk.css.map": "/mrnoob101101.github.io.weatherApp/static/css/main.0d03685b.chunk.css.map",
+    "static/js/2.8254b984.chunk.js.LICENSE.txt": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9b0eceb.js",
+    "static/js/2.8254b984.chunk.js",
+    "static/css/main.0d03685b.chunk.css",
+    "static/js/main.b4f079c1.chunk.js"
+  ]
+}
