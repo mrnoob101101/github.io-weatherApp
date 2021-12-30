@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mrnoob101101.github.io.weatherApp/static/css/main.0d03685b.chunk.css",
-    "main.js": "/mrnoob101101.github.io.weatherApp/static/js/main.b4f079c1.chunk.js",
-    "main.js.map": "/mrnoob101101.github.io.weatherApp/static/js/main.b4f079c1.chunk.js.map",
-    "runtime-main.js": "/mrnoob101101.github.io.weatherApp/static/js/runtime-main.c9b0eceb.js",
-    "runtime-main.js.map": "/mrnoob101101.github.io.weatherApp/static/js/runtime-main.c9b0eceb.js.map",
-    "static/js/2.8254b984.chunk.js": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js",
-    "static/js/2.8254b984.chunk.js.map": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js.map",
-    "index.html": "/mrnoob101101.github.io.weatherApp/index.html",
-    "static/css/main.0d03685b.chunk.css.map": "/mrnoob101101.github.io.weatherApp/static/css/main.0d03685b.chunk.css.map",
-    "static/js/2.8254b984.chunk.js.LICENSE.txt": "/mrnoob101101.github.io.weatherApp/static/js/2.8254b984.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.6b7dc5b7.chunk.css",
+    "main.js": "/static/js/main.b997dafa.chunk.js",
+    "main.js.map": "/static/js/main.b997dafa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.15383a9c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.15383a9c.js.map",
+    "static/js/2.09adf76c.chunk.js": "/static/js/2.09adf76c.chunk.js",
+    "static/js/2.09adf76c.chunk.js.map": "/static/js/2.09adf76c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6b7dc5b7.chunk.css.map": "/static/css/main.6b7dc5b7.chunk.css.map",
+    "static/js/2.09adf76c.chunk.js.LICENSE.txt": "/static/js/2.09adf76c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c9b0eceb.js",
-    "static/js/2.8254b984.chunk.js",
-    "static/css/main.0d03685b.chunk.css",
-    "static/js/main.b4f079c1.chunk.js"
+    "static/js/runtime-main.15383a9c.js",
+    "static/js/2.09adf76c.chunk.js",
+    "static/css/main.6b7dc5b7.chunk.css",
+    "static/js/main.b997dafa.chunk.js"
   ]
 }
