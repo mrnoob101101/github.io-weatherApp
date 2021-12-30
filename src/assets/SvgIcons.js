@@ -219,7 +219,7 @@ export const SunnyIcon /*50d*/ = () => {
         xmlns="http://www.w3.org/2000/svg"
         x="0"
         y="0"
-        width="500"
+        width="700"
         height="700"
         className="climacon climacon_sun"
         version="1.1"
