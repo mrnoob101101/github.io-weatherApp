@@ -6,12 +6,9 @@ import {DailyForecastCard} from "../DailyForecastCard/DailyForecastCard";
 export const CommonWeatherBox = () => {
 
 
-    return (
-        <StyledCommonWeatherBox>
+    return (<StyledCommonWeatherBox>
             <PlacesAutocompleteSearch/>
             <CurrentWeatherCard/>
             <DailyForecastCard/>
-        </StyledCommonWeatherBox>
-
-    )
+        </StyledCommonWeatherBox>)
 }

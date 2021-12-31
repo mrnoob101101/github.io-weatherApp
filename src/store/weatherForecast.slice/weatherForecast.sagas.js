@@ -1,9 +1,7 @@
 import {call, put, takeEvery} from 'redux-saga/effects'
 import axios from "axios";
 import {
-    getLatLngFromLibrary,
-    getForecastError,
-    getForecastSuccess
+    getLatLngFromLibrary, getForecastError, getForecastSuccess
 } from "./weatherForecast.slice";
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
@@ -13,7 +11,6 @@ function* workFetchForecastByLanLng(action) {
     const axiosFormatted = axios.create({
         baseURL: `${BASE_URL}?lat=${action.payload.lat}&lon=${action.payload.lng}&lang=ru&exclude={part}&units=metric&appid=${API_KEY}`,
     })
-
     try {
         const forecastFetch = yield call(() => axiosFormatted.get());
         console.log(forecastFetch.data);
