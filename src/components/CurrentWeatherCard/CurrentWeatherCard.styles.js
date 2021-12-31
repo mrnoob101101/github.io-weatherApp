@@ -28,7 +28,6 @@ export const AdditionalInfoBlock = styled.div`
   color: white;
   margin-right: 10vw;
   padding-left: 5vw;
-
 `
 
 export const WeatherDiv = styled.div`
@@ -40,14 +39,12 @@ export const DayForecast = styled.div`
   justify-content: space-around;
   border-radius: 30px;
   padding: 3vw 1vw 1vw 1vw;
-
 `
 export const TextInfo = styled.div`
   padding: 1vw 1vw 1vw 2vw;
   margin-bottom: 4vw;
   font-size: 1vw;
 `
-
 export const StyledP = styled.p`
   font-size: 7vw;
   color: white;
@@ -69,14 +66,12 @@ export const Text3 = styled.p`
   line-height: 0.7;
   padding-left: 3vw;
 `
-
 export const TextBig = styled.p`
   font-size: calc(15px + 1.5vw);
   color: white;
   line-height: 0.9;
   margin-top: 2vw;
 `
-
 export const IdleStatusIcon = styled.div`
   display: flex;
   justify-content: center;
