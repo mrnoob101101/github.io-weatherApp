@@ -8,18 +8,16 @@ import {getTimeOfDayWithTimeZoneOffset} from "../../utils/getTimeOfDayWithTimeZo
 import {DivStyled, Temp} from "./NearestForecast.styles";
 
 export const NearestForecast = () => {
-
     const weatherData = useSelector((state) => state.forecast);
     const hours = useSelector(state => selectHours(state))
     return hours.map((item) => {
-        return (<DivStyled
+        return (
+            <DivStyled
                 key={nanoid()}>{getTimeOfDayWithTimeZoneOffset(item.dt, weatherData.locationForecast.timezone_offset)}
                 <Temp>{Math.round(item.temp)}°</Temp>
                 <ForecastIcon>
                     {getSvgIcon(item.weather[0].icon)}
                 </ForecastIcon>
-            </DivStyled>
-
-        )
+            </DivStyled>)
     })
 }

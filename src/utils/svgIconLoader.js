@@ -1,14 +1,17 @@
 import {
     ClearNight,
     Clouds,
-    HardClouds, Mist,
+    HardClouds,
+    Mist,
     PartlyClouds,
     PartlyCloudsNight,
-    Rain, RainWithMoon,
-    RainWithSun, Snow,
-    SunnyDay, Thunder
+    Rain,
+    RainWithMoon,
+    RainWithSun,
+    Snow,
+    SunnyDay,
+    Thunder
 } from "../assets/SvgIcons";
-
 
 export const getSvgIcon = (id) => {
     const icons = {

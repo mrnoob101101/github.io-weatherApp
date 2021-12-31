@@ -5,52 +5,39 @@ export const StyledCurrentWeatherWrapper = styled.div`
   justify-content: space-around;
   font-family: 'Poiret One', cursive;
   font-size: 1em;
-
 `
 
 export const WeatherIcon = styled.div`
-   
+
   svg {
     width: calc(10px + 14vw);
     max-width: 19vw;
     max-height: 14vw;
-    /*width: 100%;
-    height: 100%;*/
     fill: white;
-    font-size:calc(10px + 3vw);
-
+    font-size: calc(10px + 3vw);
   }
-
 `
 
 export const MainWeatherBlock = styled.div`
   margin-left: 10vw;
-  /*background-color: #056b62;*/
   border-radius: 30px;
   padding: 1vw 4vw 0 3vw;
-
-
 `
 export const AdditionalInfoBlock = styled.div`
   font-size: 2vw;
   color: white;
   margin-right: 10vw;
-  /*padding-top: 0 0 0;*/
   padding-left: 5vw;
-  
+
 `
 
 export const WeatherDiv = styled.div`
   display: flex;
   font-size: calc(20px + 1.5vw);
-  
-  
-
 `
 export const DayForecast = styled.div`
   display: flex;
   justify-content: space-around;
-  /*background-color: #056b62;*/
   border-radius: 30px;
   padding: 3vw 1vw 1vw 1vw;
 
@@ -63,26 +50,23 @@ export const TextInfo = styled.div`
 
 export const StyledP = styled.p`
   font-size: 7vw;
-  
-  
   color: white;
   margin: 5% 0 0 10%;
-
 `
 export const Text = styled.p`
   font-size: calc(11px + 1vw);
   color: white;
-  line-height: 0.9;  
+  line-height: 0.9;
 `
 export const Text2 = styled.p`
   font-size: calc(9px + 1vw);
   color: white;
-  line-height: 0.9;  
+  line-height: 0.9;
 `
 export const Text3 = styled.p`
   font-size: calc(9px + 1vw);
   color: white;
-  line-height: 0.7;  
+  line-height: 0.7;
   padding-left: 3vw;
 `
 
@@ -97,10 +81,11 @@ export const IdleStatusIcon = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+
   svg {
     shape-rendering: geometricPrecision;
     fill: #fac55d;
-    max-width: 100%;      
+    max-width: 100%;
   }
 
   g, path, circle, rect {
@@ -110,8 +95,8 @@ export const IdleStatusIcon = styled.div`
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     transform-box: fill-box;
-    
-    
+
+
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
     animation-timing-function: linear;

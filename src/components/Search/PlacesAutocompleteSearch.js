@@ -17,7 +17,6 @@ import {
     setWeatherCardClear
 } from "../../store/weatherForecast.slice/weatherForecast.slice";
 
-
 export const PlacesAutocompleteSearch = () => {
     const dispatch = useDispatch();
     const {
@@ -31,15 +30,12 @@ export const PlacesAutocompleteSearch = () => {
         debounce: 300,
     });
     const ref = useOnclickOutside(() => {
-
         clearSuggestions();
     });
 
     const handleInput = (e) => {
-
         setValue(e.target.value);
     };
-
 
     const handleSelect =
         ({description}) =>
@@ -47,7 +43,6 @@ export const PlacesAutocompleteSearch = () => {
                 dispatch(setWeatherCardClear())
                 setValue(description, false);
                 clearSuggestions();
-
 
                 getGeocode({address: description})
                     .then((results) => getLatLng(results[0]))
@@ -63,7 +58,6 @@ export const PlacesAutocompleteSearch = () => {
                 setValue("");
             };
 
-
     const renderSuggestions = () =>
         data.map((suggestion) => {
             const {
@@ -77,7 +71,6 @@ export const PlacesAutocompleteSearch = () => {
                 </SuggestionPlace>
             );
         });
-
     return (
         <SearchBox>
             <SearchWrapper ref={ref}>
@@ -87,12 +80,9 @@ export const PlacesAutocompleteSearch = () => {
                     disabled={!ready}
                     placeholder="Введите местоположение"
                 />
-
                 {status === "OK" && <SuggestionsStyled>{renderSuggestions()}</SuggestionsStyled>}
                 {status === "ZERO_RESULTS" && <Span>Введите корректное место</Span>}
-
             </SearchWrapper>
-
         </SearchBox>
     );
 };

@@ -14,14 +14,13 @@ export const SearchWrapper = styled.div`
 `
 
 export const StyledSearch = styled.input`
-  
-  font-size:calc(10px + 1.2vw);
+  font-size: calc(10px + 1.2vw);
   color: white;
   outline: none;
   margin-top: 1.2em;
   border: 0;
   max-width: 100%;
-  border-bottom: 3px solid white /*#296e6b*/;
+  border-bottom: 3px solid white;
   font-family: 'Tinos', serif;
   background-color: transparent;
   padding: 0 40px;
@@ -34,15 +33,11 @@ export const StyledSearch = styled.input`
     color: transparent;
     transition: 0.4s linear;
   }
-
-`;
-
+`
 export const SuggestionsStyled = styled.div`
   position: absolute;
   padding-top: calc(25px + 3vw);
-  /*font-size: 2vw;*/
   font-size: calc(5px + 1.5vw);
-
 `
 export const SuggestionPlace = styled.div`
   background-color: #add9d4 /*#F0F0F0*/;
@@ -56,7 +51,6 @@ export const SuggestionPlace = styled.div`
   :hover {
     background-color: beige;
   }
-
 `
 export const Span = styled.span`
   position: absolute;

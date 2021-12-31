@@ -5,11 +5,9 @@ import {CommonWeatherBox} from "../components/CommonWeatherBox/CommonWeatherBox"
 
 function App() {
     return (
-        (
-            <div className="App">
-                <CommonWeatherBox/>
-            </div>
-        )
+        <div className="App">
+            <CommonWeatherBox/>
+        </div>
     )
 }
 

@@ -9,20 +9,15 @@ import {getMonth} from "../../utils/getMonth";
 
 
 export const DailyForecastCard = () => {
-
     const weatherData = useSelector((state) => state.forecast);
-
     const dailyForecast = useSelector((state) => state.forecast.locationForecast.daily);
 
     if (weatherData.status === 'success') {
-
         return (
             <b><DailyForecastWrapper>
-
                 {dailyForecast.slice(1, 7).map((item) => {
                     return (
                         <Card key={nanoid()}>
-
                             <DateDiv>
                                 {getWeekDay(item.dt)}<br/>
                                 {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}
@@ -34,14 +29,10 @@ export const DailyForecastCard = () => {
                             <ForecastIcon>
                                 {getSvgIcon(item.weather[0].icon)}
                             </ForecastIcon>
-
                         </Card>)
                 })}
-
             </DailyForecastWrapper></b>
-
         )
-
     } else return null
 
 }
