@@ -17,7 +17,7 @@ export const DailyForecastCard = () => {
             <b><DailyForecastWrapper>
                 {dailyForecast.slice(1, 7).map((item) => {
                     return (
-                        <Card key={nanoid()}>
+                        <Card key={item.dt + item.temp.max}>
                             <DateDiv>
                                 {getWeekDay(item.dt)}<br/>
                                 {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}

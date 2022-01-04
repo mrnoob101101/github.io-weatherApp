@@ -13,7 +13,7 @@ export const NearestForecast = () => {
     return hours.map((item) => {
         return (
             <DivStyled
-                key={nanoid()}>{getTimeOfDayWithTimeZoneOffset(item.dt, weatherData.locationForecast.timezone_offset)}
+                key={item.dt + item.temp}>{getTimeOfDayWithTimeZoneOffset(item.dt, weatherData.locationForecast.timezone_offset)}
                 <Temp>{Math.round(item.temp)}°</Temp>
                 <ForecastIcon>
                     {getSvgIcon(item.weather[0].icon)}
