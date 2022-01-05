@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const DailyForecastWrapper = styled.div`
   display: flex;
@@ -9,11 +9,11 @@ export const DailyForecastWrapper = styled.div`
   border-top: 3px solid white;
   font-family: 'Poiret One', cursive;
   color: white;
-`
+`;
 export const Card = styled.div`
   width: 11vw;
   text-align: center;
-`
+`;
 export const ForecastIcon = styled.div`
   svg {
     max-width: calc(40px + 1.5vw);
@@ -21,11 +21,11 @@ export const ForecastIcon = styled.div`
     height: 100%;
     fill: white;
   }
-`
+`;
 export const DateDiv = styled.div`
   font-family: Tinos, serif;
   font-size: calc(7px + 0.6vw);
-`
+`;
 export const Max = styled.p`
   font-size: calc(15px + 0.6vw);
-`
+`;

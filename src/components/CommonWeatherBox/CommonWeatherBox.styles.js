@@ -1,5 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const StyledCommonWeatherBox = styled.div`
-
-`;
+export const StyledCommonWeatherBox = styled.div``;
