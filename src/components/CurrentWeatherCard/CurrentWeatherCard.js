@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import {
   AdditionalInfoBlock,
   DayForecast,
@@ -13,38 +13,38 @@ import {
   TextInfo,
   WeatherDiv,
   WeatherIcon
-} from './CurrentWeatherCard.styles';
+} from "./CurrentWeatherCard.styles";
 
-import { getSvgIcon } from '../../utils/svgIconLoader';
-import { capitalizeFirstLetter } from '../../utils/capitalizeFirstLetter';
-import dayjs from 'dayjs';
-import { getWeekDay } from '../../utils/getWeekDay';
-import { getMonth } from '../../utils/getMonth';
-import { SunnyIcon } from '../../assets/SvgIcons';
-import { NearestForecast } from '../NearestForecast/NearestForecast';
-import { getTimeOfDayWithTimeZoneOffset } from '../../utils/getTimeOfDayWithTimeZoneOffset';
+import { getSvgIcon } from "../../utils/svgIconLoader";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
+import dayjs from "dayjs";
+import { getWeekDay } from "../../utils/getWeekDay";
+import { getMonth } from "../../utils/getMonth";
+import { SunnyIcon } from "../../assets/SvgIcons";
+import { NearestForecast } from "../NearestForecast/NearestForecast";
+import { getTimeOfDayWithTimeZoneOffset } from "../../utils/getTimeOfDayWithTimeZoneOffset";
 
 export const CurrentWeatherCard = () => {
   const weatherData = useSelector(state => state.forecast);
-  const currentWeather = useSelector(state => state.forecast.locationForecast.current);
-  const place = useSelector(state => state.forecast.descriptionOfPlace);
+  const currentWeather = useSelector(state => state.forecast?.locationForecast.current);
+  const place = useSelector(state => state.forecast?.descriptionOfPlace);
 
-  if (weatherData.status === 'idle') {
+  if (weatherData && weatherData.status === "idle") {
     return (
       <IdleStatusIcon>
         <SunnyIcon />
       </IdleStatusIcon>
     );
   }
-  if (weatherData.status === 'error') {
+  if (weatherData && weatherData.status === "error") {
     return <StyledP>Произошла чудовищная ошибка!</StyledP>;
-  } else if (weatherData.status === 'success') {
+  } else if (weatherData && weatherData.status === "success") {
     return (
       <StyledCurrentWeatherWrapper>
         <MainWeatherBlock>
           <b>
             <TextBig>
-              {place.split(',')[0]},
+              {place.split(",")[0]},
               {getTimeOfDayWithTimeZoneOffset(
                 currentWeather.dt,
                 weatherData.locationForecast.timezone_offset
@@ -53,7 +53,7 @@ export const CurrentWeatherCard = () => {
           </b>
           <b>
             <Text>
-              {getWeekDay(currentWeather.dt)},{dayjs(currentWeather.dt * 1000).format(' DD')}
+              {getWeekDay(currentWeather.dt)},{dayjs(currentWeather.dt * 1000).format(" DD")}
               {getMonth(currentWeather.dt)}
             </Text>
           </b>

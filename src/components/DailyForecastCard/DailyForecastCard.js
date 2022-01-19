@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux';
-import { Card, DailyForecastWrapper, DateDiv, ForecastIcon, Max } from './DailyForecast.styles';
-import dayjs from 'dayjs';
-import React from 'react';
-import { getSvgIcon } from '../../utils/svgIconLoader';
-import { getWeekDay } from '../../utils/getWeekDay';
-import { getMonth } from '../../utils/getMonth';
+import { useSelector } from "react-redux";
+import { Card, DailyForecastWrapper, DateDiv, ForecastIcon, Max } from "./DailyForecast.styles";
+import dayjs from "dayjs";
+import React from "react";
+import { getSvgIcon } from "../../utils/svgIconLoader";
+import { getWeekDay } from "../../utils/getWeekDay";
+import { getMonth } from "../../utils/getMonth";
 
 export const DailyForecastCard = () => {
   const weatherData = useSelector(state => state.forecast);
-  const dailyForecast = useSelector(state => state.forecast.locationForecast.daily);
+  const dailyForecast = useSelector(state => state.forecast?.locationForecast.daily);
 
-  if (weatherData.status === 'success') {
+  if (weatherData && weatherData.status === "success") {
     return (
       <b>
         <DailyForecastWrapper>
@@ -20,7 +20,7 @@ export const DailyForecastCard = () => {
                 <DateDiv>
                   {getWeekDay(item.dt)}
                   <br />
-                  {dayjs(item.dt * 1000).format('DD')} {getMonth(item.dt)}
+                  {dayjs(item.dt * 1000).format("DD")} {getMonth(item.dt)}
                 </DateDiv>
                 <div>
                   <Max> {Math.round(item.temp.max)}°С </Max>
